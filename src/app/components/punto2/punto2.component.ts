@@ -26,15 +26,7 @@ export class Punto2Component implements OnInit {
   }
 
   cargarDatos(){
-     this.carga[0]=this.usuario;
-     this.carga[1]=this.organizacion;
-     this.carga[2]=this.solicita;
-     alert(this.usuario);
-     alert(this.organizacion);
-     this.informacion.push(this.carga);
-     alert(this.carga[0]);
-     alert(this.carga[1]);
-     alert(this.carga[2]);
+     
   }
 
 }
