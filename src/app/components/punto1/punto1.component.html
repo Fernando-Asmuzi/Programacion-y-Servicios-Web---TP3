@@ -1,0 +1,32 @@
+<body>
+    <div class="container">
+        <div>
+            <h4>Envia tu mensaje!</h4>
+        </div>
+    
+        <div class="mb-3">
+            <label for="remitente" class="form-label">Remitente</label>
+            <input type="text" class="form-control" id="remitente" name="remitente" [(ngModel)]="remitente" placeholder="Tu nombre">
+            <br>
+            <label for="destinatario" class="form-label">Número del destinatario</label>
+            <input type="text" class="form-control" id="destinatario" [(ngModel)]="destinatario" placeholder="Numero">
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Escribí tu mensaje (max. 120 caracteres)</label>
+            <textarea maxlength="120" class="form-control" id="mensaje" rows="5" [(ngModel)]="mensaje"></textarea>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-light me-md-2" type="button" (click)="limpiarMensaje()">Limpiar</button>
+            <button class="btn btn-warning" type="button" (click)="enviarMensaje()" data-bs-toggle="modal" data-bs-target="#contenedor-modal">Enviar</button>
+           
+        </div>
+    </div>
+
+
+    
+</body>
+
+
+
+
+

@@ -1,0 +1,16 @@
+.container{
+    width: 500px;
+    background: rgb(218,247,166);
+    background: linear-gradient(90deg, rgba(218,247,166,1) 0%, rgba(255,195,0,1) 17%, rgba(255,87,51,1) 33%, rgba(199,0,57,1) 52%, rgba(144,12,63,1) 72%, rgba(88,24,69,1) 89%);
+    font-family: fantasy;
+    padding: 5px;
+    border: 1px solid;
+}
+
+body{
+   padding:100px;
+}
+
+button{
+    width: 100px;
+}

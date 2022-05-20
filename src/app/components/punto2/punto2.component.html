@@ -1,0 +1,21 @@
+
+<body>
+    <div class="container">
+        <form>
+            <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="email" class="form-control" id="usuario" [(ngModel)]="usuario" placeholder="Ingrese su email">
+            </div>
+            <div class="mb-3">
+            <label for="organizacion" class="form-label">Organizacion</label>
+            <input type="text" class="form-control" id="organizacion" [(ngModel)]="organizacion">
+            </div>
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="solicita" [(ngModel)]="solicita">
+            <label class="form-check-label" for="solicita">Solicita certificado?</label>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="cargarDatos()">Confirmar</button>
+        </form>
+    </div>
+</body>
+    
