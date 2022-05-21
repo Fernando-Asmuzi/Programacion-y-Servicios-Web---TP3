@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Asistente } from 'src/app/models/asistente';
 
 @Component({
   selector: 'app-punto2',
@@ -10,15 +11,15 @@ export class Punto2Component implements OnInit {
   usuario: String;
   organizacion: String;
   solicita: boolean;
-  carga : Array<any>;
-  informacion: Array<any>; 
+  asistente: Asistente; 
+  asistentes : Array<Asistente>;
   
   constructor() { 
     this.usuario = "";
     this.organizacion = "";
     this.solicita= false;
-    this.carga = [this.usuario, this.organizacion, this.solicita]
-    this.informacion=[this.carga[0]]              
+    this.asistente = new Asistente();
+    this.asistentes = new Array<Asistente>();             
   }
 
 
@@ -26,7 +27,8 @@ export class Punto2Component implements OnInit {
   }
 
   cargarDatos(){
-     
+     this.asistentes.push(this.asistente);
+     this.asistente= new Asistente();
   }
 
 }

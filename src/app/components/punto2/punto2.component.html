@@ -4,18 +4,36 @@
         <form>
             <div class="mb-3">
             <label for="usuario" class="form-label">Usuario</label>
-            <input type="email" class="form-control" id="usuario" [(ngModel)]="usuario" placeholder="Ingrese su email">
+            <input type="email" class="form-control" id="usuario" name="usuario" [(ngModel)]="asistente.usuario" placeholder="Ingrese su email">
             </div>
             <div class="mb-3">
             <label for="organizacion" class="form-label">Organizacion</label>
-            <input type="text" class="form-control" id="organizacion" [(ngModel)]="organizacion">
+            <input type="text" class="form-control" id="organizacion" name="organizacion" [(ngModel)]="asistente.organizacion">
             </div>
             <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="solicita" [(ngModel)]="solicita">
+            <input type="checkbox" class="form-check-input" id="solicita" name="solicita" [(ngModel)]="asistente.solicita">
             <label class="form-check-label" for="solicita">Solicita certificado?</label>
             </div>
-            <button type="submit" class="btn btn-primary" (click)="cargarDatos()">Confirmar</button>
+            <button type="submit" class="btn btn-primary" (click)="cargarDatos()">Registrar</button>
         </form>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Usuario</th>
+                <th scope="col">Organización</th>
+                <th scope="col">Solicita certificado?</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let asi of asistentes">
+                <td>{{asi.usuario}}</td>
+                <td>{{asi.organizacion}}</td>
+                <td>{{asi.solicita ? 'Si' : 'No'}}</td>
+              </tr>
+            </tbody>
+          </table>
+
     </div>
 </body>
     
